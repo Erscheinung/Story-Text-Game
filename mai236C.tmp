@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://qx376ggks5sd"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_q5x0t"]
+[ext_resource type="Script" path="res://Control.gd" id="2_cp8p1"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(400, 292)
+script = ExtResource("1_q5x0t")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_cp8p1")
+
+[node name="StoryText" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextTimer" type="Timer" parent="Control"]
+
+[node name="Choice1" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Choice2" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

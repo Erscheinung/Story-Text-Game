@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://qx376ggks5sd"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_567nn"]
+[ext_resource type="Script" path="res://Control.gd" id="2_cp8p1"]
+[ext_resource type="Script" path="res://StartUI.gd" id="3_kh0yr"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(595, 254)
+script = ExtResource("1_567nn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_cp8p1")
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="StoryText" type="Label" parent="Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Choice1" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Choice2" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextTimer" type="Timer" parent="Control"]
+
+[node name="SaveButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ExitButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ExitToMenuButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="StartUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_kh0yr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NewGameButton" type="Button" parent="StartUI/VBoxContainer"]
+layout_mode = 2
+
+[node name="LoadGameButton" type="Button" parent="StartUI/VBoxContainer"]
+layout_mode = 2
